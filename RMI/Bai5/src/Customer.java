@@ -6,6 +6,8 @@ public class Customer implements Serializable {
     private String name;
     private String address;
 
+    public Customer(){}
+
     public Customer(int customerID,String name ,String address) {
         this.customerID = customerID;
         this.name = name;
