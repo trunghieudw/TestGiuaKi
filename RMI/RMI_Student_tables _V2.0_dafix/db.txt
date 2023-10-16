@@ -1,0 +1,49 @@
+CREATE TABLE `test`.`student` (
+  `student_code` VARCHAR(6) NOT NULL,
+  `student_name` VARCHAR(45) NULL,
+  PRIMARY KEY (`student_code`));
+
+
+CREATE TABLE `test`.`subject` (
+  `subject_code` VARCHAR(6) NOT NULL,
+  `subject_name` VARCHAR(45) NULL,
+  PRIMARY KEY (`subject_code`));
+
+
+CREATE TABLE `test`.`score` (
+  `idscore` INT NOT NULL AUTO_INCREMENT,
+  `subject_code` VARCHAR(6) NULL,
+  `student_code` VARCHAR(6) NULL,
+  `subject_score` DOUBLE NULL,
+  PRIMARY KEY (`idscore`),
+  INDEX `student_idx` (`student_code` ASC) VISIBLE,
+  INDEX `subject_idx` (`subject_code` ASC) VISIBLE,
+  CONSTRAINT `student`
+    FOREIGN KEY (`student_code`)
+    REFERENCES `test`.`student` (`student_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `subject`
+    FOREIGN KEY (`subject_code`)
+    REFERENCES `test`.`subject` (`subject_code`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+
+
+
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV01', 'M03', '1');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV01', 'M04', '5');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV02', 'M02', '9');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV02', 'M03', '8');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV02', 'M04', '4');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV03', 'M01', '7');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV03', 'M02', '8');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV03', 'M03', '5');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV03', 'M04', '4');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M01', '9');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M02', '5');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M03', '7');
+INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M04', '8');

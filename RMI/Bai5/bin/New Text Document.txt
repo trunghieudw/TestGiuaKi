@@ -1,0 +1,4 @@
+java -cp D:/java/ThiGK/Bai5/src/mysql-connector-j-8.1.0.jar CustomerServer.java
+
+
+java -cp D:/java/ThiGK/Bai5/bin/mysql-connector-j-8.1.0.jar CustomerServer

@@ -1,0 +1,15 @@
+java -cp D:/java/ThiGK/Bai5/src/mysql-connector-j-8.1.0.jar CustomerServer.java
+
+
+java -cp D:/java/ThiGK/Bai5/bin/mysql-connector-j-8.1.0.jar CustomerServer
+
+
+CREATE DATABASE customer_db;
+
+USE customer_db;
+
+CREATE TABLE customer (
+    customerID INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    address VARCHAR(50) NOT NULL
+);
