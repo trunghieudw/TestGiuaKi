@@ -47,3 +47,14 @@ INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score
 INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M02', '5');
 INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M03', '7');
 INSERT INTO `student_db`.`score` (`student_code`, `subject_code`, `subject_score`) VALUES ('SV04', 'M04', '8');
+
+INSERT INTO `student_db`.`student` (`student_code`, `student_name`) VALUES ('SV01', 'Hieu');
+INSERT INTO `student_db`.`student` (`student_code`, `student_name`) VALUES ('SV02', 'Hieu2');
+INSERT INTO `student_db`.`student` (`student_code`, `student_name`) VALUES ('SV03', 'Hieu3');
+INSERT INTO `student_db`.`student` (`student_code`, `student_name`) VALUES ('SV04', 'Hieu4');
+
+INSERT INTO `student_db`.`subject` (`subject_code`, `subject_name`) VALUES ('M01', 'Toán');
+INSERT INTO `student_db`.`subject` (`subject_code`, `subject_name`) VALUES ('M02', 'Lý');
+INSERT INTO `student_db`.`subject` (`subject_code`, `subject_name`) VALUES ('M03', 'Hoá');
+INSERT INTO `student_db`.`subject` (`subject_code`, `subject_name`) VALUES ('M04', 'Anh');
+

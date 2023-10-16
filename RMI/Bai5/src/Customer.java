@@ -11,7 +11,6 @@ public class Customer implements Serializable {
         this.name = name;
         this.address = address;
     }
-0
     public int getCustomerID() {
         return customerID;
     }
